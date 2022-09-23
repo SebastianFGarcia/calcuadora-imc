@@ -1,0 +1,117 @@
+$crema: hsl(51, 84%, 85%)
+$blanco: hsl(0, 0%, 100%)
+$verde: hsl(140, 29%, 72%)
+$verde-oscuro: hsl(140, 29%, 52%)
+$rojo: hsl(10, 52%, 52%)
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;700&display=swap')
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+body
+    background-color: $crema
+    font-family: 'Poppins', sans-serif
+
+.container
+    margin: 100px auto
+    width: 800px
+    height: 500px
+    background-color: $blanco
+    border-radius: 10px
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3)
+    overflow: hidden
+
+aside
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    grid-column: 1 / 2
+    background-color: $verde
+    .label
+        color: $blanco
+        font-size: 2rem
+        font-weight: 700
+        margin:
+            top: 20px
+    .input
+        margin:
+            top: 20px
+        border: none
+        padding: 10px
+        border-radius: 5px
+        width: 80%
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3)
+        &:focus
+            outline: none
+            box-shadow: 0 0 10px 0 rgba(0, 174, 255, 0.5)
+
+    .error
+        color: $rojo
+        font-size: 0.6rem
+        align-self: flex-start
+        margin:
+            top: 5px
+            left: 30px
+
+    .button
+        margin:
+            top: 20px
+        border: none
+        padding: 10px
+        border-radius: 5px
+        width: 80%
+        background-color: $blanco
+        color: #000
+        font-weight: 700
+        cursor: pointer
+        &:hover
+            background-color: $verde-oscuro
+            color: $blanco
+
+.content
+    grid-column: 2 / 4
+    display: flex
+    flex-direction: column
+    justify-content: center
+    margin: 0 40px
+    .title
+        font-size: 2rem
+        font-weight: 700
+        text-align: center
+        margin:
+            bottom: 30px
+
+    .circular-progress
+        display: flex
+        justify-content: center
+        align-items: center
+        margin:
+            top: 30px
+            bottom: 30px
+        .progress
+            width: 200px
+            height: 200px
+            border-radius: 50%
+            border: 10px solid 
+            border-color: $verde 
+            position: relative
+            .progress__text
+                width: 100%
+                height: 100%
+                border-radius: 50%
+                position: absolute
+                display: flex
+                justify-content: center
+                align-items: center
+                font-size: 2rem
+                font-weight: 700
+                color: $verde
+                transform: rotate(0deg)
+                transition: transform 0.5s ease-in-out
+
+
